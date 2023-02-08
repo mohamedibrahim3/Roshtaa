@@ -1,2 +1,2 @@
 # Roshtaa
-## For gallery and ake photo
+## For gallery and take photo
