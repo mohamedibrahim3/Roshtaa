@@ -16,7 +16,10 @@
         android:layout_marginEnd="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/gallery" />
+        app:srcCompat="@drawable/gallery"
+        android:clickable="true"
+        android:focusable="true"
+        android:contentDescription="TODO" />
 
     <ImageView
         android:id="@+id/photoId"
@@ -26,7 +29,10 @@
         android:layout_marginEnd="24dp"
         app:layout_constraintEnd_toStartOf="@+id/galleryId"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/photo" />
+        app:srcCompat="@drawable/photo"
+        android:clickable="true"
+        android:focusable="true"
+        android:contentDescription="TODO" />
 
     <TextView
         android:id="@+id/textView"
