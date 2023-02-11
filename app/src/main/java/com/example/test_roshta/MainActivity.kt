@@ -55,19 +55,21 @@ class MainActivity : AppCompatActivity() {
     }
     //for camera
     private lateinit var imageUri: Uri
-    fun openCamera() {
+    private fun openCamera() {
         val values = ContentValues().apply {
             put(MediaStore.Images.Media.TITLE, "New Picture")
             put(MediaStore.Images.Media.DESCRIPTION, "From the Camera")
         }
 
-        imageUri = contentResolver.insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, values)!!
+        imageUri = contentResolver.insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI,
+            values)!!
         val cameraIntent = Intent(MediaStore.ACTION_IMAGE_CAPTURE).apply {
             putExtra(MediaStore.EXTRA_OUTPUT, imageUri)
         }
 
         startActivityForResult(cameraIntent, 0)
     }
+    @Deprecated("Deprecated in Java")
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if (resultCode == Activity.RESULT_OK && requestCode == 100) {
