@@ -14,6 +14,9 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.test_roshta.databinding.ActivityMainBinding
 import com.example.test_roshta.databinding.BottomsheetlayoutBinding
 import com.google.android.material.bottomsheet.BottomSheetDialog
+import kotlinx.coroutines.coroutineScope
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.runBlocking
 
 
 @Suppress("DEPRECATION")
@@ -28,17 +31,24 @@ class MainActivity : AppCompatActivity() {
             val gallery: ImageView = view.findViewById(R.id.galleryId)
             var camera: ImageView = view.findViewById(R.id.photoId)
             gallery.setOnClickListener {
+                pickPhotoGallery()
+                runBlocking {
+                    delay(3000)
+                }
                 binding?.txtChoosePhoto?.visibility = View.VISIBLE
                 binding?.addRoshtaPhoto?.visibility = View.INVISIBLE
                 binding?.btnNext?.text = "أعرف أقرب صيدلية"
-                pickPhotoGallery()
+
 
             }
             camera.setOnClickListener {
+                openCamera()
+                runBlocking {
+                    delay(3000)
+                }
                 binding?.txtChoosePhoto?.visibility = View.VISIBLE
                 binding?.addRoshtaPhoto?.visibility = View.INVISIBLE
                 binding?.btnNext?.text = "أعرف أقرب صيدلية"
-                openCamera()
             }
             dialog.setContentView(view)
             dialog.show()

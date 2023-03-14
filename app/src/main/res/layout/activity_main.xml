@@ -156,6 +156,7 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/txtFieldTakeMid"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="361dp"
             android:layout_height="119dp"
             android:background="@drawable/custom_edit"
