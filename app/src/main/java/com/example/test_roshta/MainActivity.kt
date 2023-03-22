@@ -38,8 +38,14 @@ class MainActivity : AppCompatActivity() {
                 binding?.txtChoosePhoto?.visibility = View.VISIBLE
                 binding?.addRoshtaPhoto?.visibility = View.INVISIBLE
                 binding?.btnNext?.text = "أعرف أقرب صيدلية"
-
-
+                binding?.clearBtnId?.visibility = view.visibility
+                binding?.takephoto?.visibility = View.VISIBLE
+                binding?.clearBtnId?.setOnClickListener {
+                    binding?.txtChoosePhoto?.visibility = View.GONE
+                    binding?.takephoto?.visibility = View.GONE
+                    binding?.addRoshtaPhoto?.visibility = View.VISIBLE
+                    binding?.clearBtnId?.visibility = View.GONE
+                }
             }
             camera.setOnClickListener {
                 openCamera()
@@ -49,6 +55,14 @@ class MainActivity : AppCompatActivity() {
                 binding?.txtChoosePhoto?.visibility = View.VISIBLE
                 binding?.addRoshtaPhoto?.visibility = View.INVISIBLE
                 binding?.btnNext?.text = "أعرف أقرب صيدلية"
+                binding?.clearBtnId?.visibility = view.visibility
+                binding?.takephoto?.visibility = View.VISIBLE
+                binding?.clearBtnId?.setOnClickListener {
+                    binding?.txtChoosePhoto?.visibility = View.GONE
+                    binding?.takephoto?.visibility = View.GONE
+                    binding?.addRoshtaPhoto?.visibility = View.VISIBLE
+                    binding?.clearBtnId?.visibility = View.GONE
+                }
             }
             dialog.setContentView(view)
             dialog.show()
