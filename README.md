@@ -1,4 +1,4 @@
 # Take Roshtaa.
 
-## For gallery and take photo.
+## For gallery and take photo
 
